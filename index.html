@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>移动端界面</title>
+    <script src="dist/js/flexble.js"></script>
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_gsea2zgerrjp2e29.css"> -->
+    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" href="dist/css/iconfont.css">
+</head>
+
+<body style="position:relative;">
+    <header>
+        <div class="header">
+            <a href="#" class="user"><i class="iconfont icon-iconfont"></i></a>
+            <div class="logo">
+                <a class="logo_img" href=""><i class="iconfont icon-weipinhuieps"></i></a>
+                <span>北京<i class="iconfont icon-jiantou"></i></span>
+            </div>
+            <a href="#" class="search"><i class="iconfont icon-search"></i></a>
+        </div>
+        <!-- 头部导航条 -->
+        <div class="swiper-container" id="slide1">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide page1 corrent ">
+                    <a href="# ">首页</a>
+                </div>
+                <div class="swiper-slide page1">
+                    <a href="# ">616年中大促</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">唯品国际</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">美妆</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">男装</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">女装</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">母婴</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# "> 运动</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# "> 家居家电</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# "> VIPLUX</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="slider">
+        <div class="swiper-container" id="slide2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide page1">
+                    <img src="dist/pic/14973483745875.gif" alt="">
+                </div>
+                <div class="swiper-slide page1">
+                    <img src="dist/pic/14973483745875.gif" alt="">
+                </div>
+            </div>
+            <!--这个位置是公共区域-->
+            <div class="swiper-pagination"></div>
+            <!--   html部分-->
+            <!--  如果我要加一个控件-->
+        </div>
+    </div>
+    <!-- 新手指导专区 -->
+    <div class="container container1">
+        <div>
+            <img src="dist/images/14956164501721.jpg" alt="" width="100%">
+        </div>
+        <div class="guide">
+            <div class="guide_item">
+                <a href="#"><img src="dist/images/ga1.jpg" alt=""></a>
+            </div>
+            <div class="guide_item">
+                <a href="#"><img src="dist/images/ga2.jpg" alt=""></a>
+            </div>
+            <div class="guide_item">
+                <a href="#"><img src="dist/images/ga3.jpg" alt=""></a>
+            </div>
+            <div class="guide_item">
+                <a href="#"><img src="dist/images/ga4.jpg" alt=""></a>
+            </div>
+            <div class="guide_item">
+                <a href="#"> <img src="dist/images/ga5.jpg" alt=""></a>
+            </div>
+            <div class="guide_item">
+                <a href="#"><img src="dist/images/ga6.jpg" alt=""></a>
+            </div>
+            <div class="guide_item">
+                <a href="#"><img src="dist/images/ga7.jpg" alt=""></a>
+            </div>
+            <div class="guide_item">
+                <a href="#"> <img src="dist/images/ga8.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- 616大促 -->
+    <div class="container container2">
+        <div>
+            <img src="dist/images/14971637281925.jpg" alt="" width="100%">
+        </div>
+        <div class="ads ads1">
+            <a href="#"><img src="dist/images/14973201719892.jpg" alt=""></a>
+        </div>
+        <div class="ads ads2">
+            <div class="ads2_left">
+                <a href="#"><img src="dist/images/14972327845624.jpg" alt=""></a>
+            </div>
+            <div class="ads2_right">
+                <a href="#"><img src="dist/images/14972328049399.jpg" alt=""></a>
+                <a href="#"><img src="dist/images/14973191039544.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="ads3">
+            <div>
+                <a href="#"><img src="dist/images/14972406778837.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="dist/images/14972406540472.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="dist/images/14970065803147.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- 花小钱穿出国际范 -->
+    <div class="container container2">
+        <div>
+            <img src="dist/images/14972656550487.jpg" alt="" width="100%">
+        </div>
+    </div>
+    <!-- 616免排队 -->
+    <!-- 新人专属 -->
+    <!-- 今日特卖 -->
+</body>
+
+</html>
+<script src="dist/js/swiper.min.js "></script>
+<script>
+var mySwiper1 = new Swiper('#slide1', {
+    preventClicks: false,
+    // slidesPerView: 4,
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    freeMode: true,
+    // onTap: function() {
+    //     mySwiper2.slideTo(mySwiper1.clickedIndex);
+    // }
+
+});
+// 响应式图片  width:100%;height:auto
+var mySwiper2 = new Swiper('#slide2', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    autoplay: 1000,
+    autoplay: 3000,
+    speed: 300,
+    loop: true,
+    slidesPerView: 1,
+
+});
+</script>

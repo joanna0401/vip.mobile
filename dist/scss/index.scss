@@ -1,0 +1,166 @@
+@charset "UTF-8";
+a {
+    text-decoration: none;
+}
+
+// 将px转换为rem单位，在任何手机端同样适用
+@function rem($arg) {
+    // 你的页面是多少除以多少
+    @return $arg/75px * 1rem;
+}
+
+$color:#de3d96;
+
+/* 页面头部内容 start*/
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    // width: rem(750px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: rem(90px);
+    line-height: rem(90px);
+    font-size: rem(30px);
+    background-color: red;
+    // background-color: #fbfbfa;
+    border-top: 1px solid #b0b0af;
+    a {
+        display: inline-block;
+        color: #222222;
+    }
+    .user {
+        padding-left: rem(24px);
+    }
+    .search {
+        padding-right: rem(24px);
+    }
+    .logo span {
+        display: inline-block;
+        font-size: rem(28px);
+        margin-left: rem(20px);
+        .iconfont {
+            margin-left: rem(24px);
+        }
+    }
+    .icon-iconfont {
+        font-size: rem(50px);
+    }
+    .icon-search {
+        font-size: rem(40px);
+    }
+    .icon-weipinhuieps {
+        font-size: rem(40px);
+        color: $color;
+    }
+}
+
+// 头部导航条
+#slide1 {
+    width: 100%;
+    height: rem(82px);
+    background-color: #39424a;
+    .swiper-wrapper {
+        margin-top: rem(14px);
+        min-width: rem(750px);
+        max-width: rem(1500px);
+    }
+    .page1 {
+        height: rem(50px);
+        width: auto;
+        text-align: center;
+        border-right: 1px solid #4a5259;
+        padding-right: rem(34px);
+        padding-left: rem(34px);
+        a {
+            display: inline-block;
+            color: #cfd3da;
+            font-size: rem(30px);
+            line-height: rem(50px);
+        }
+    }
+    .corrent a {
+        border-bottom: 2px solid #f02387;
+    }
+}
+
+// 头部结束
+.slider {
+    margin-top: rem(170px);
+    width: 100%;
+    .swiper-wrapper {
+        width: 100%;
+    }
+    #slide2 {
+        width: 100%;
+        .swiper-slide {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// container
+.container {
+    width: 100%;
+}
+
+.guide {
+    display: flex;
+    flex-wrap: wrap;
+    .guide_item {
+        width: 25%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.container2 {
+    .ads {
+        width: 100%;
+    }
+    .ads1 {
+        img {
+            width: 100%;
+        }
+    }
+    .ads2 {
+        display: flex;
+        flex-wrap: nowrap;
+        .ads2_left {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+        .ads2_right {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .ads3 {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        div {
+            width: 33.3%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/* 页面头部内容 end*/

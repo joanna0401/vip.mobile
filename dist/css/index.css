@@ -1,0 +1,114 @@
+@charset "UTF-8";
+a {
+  text-decoration: none; }
+
+/* 页面头部内容 start*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.4rem;
+  background-color: #fbfbfa;
+  border-top: 1px solid #b0b0af; }
+  .header a {
+    display: inline-block;
+    color: #222222; }
+  .header .user {
+    padding-left: 0.32rem; }
+  .header .search {
+    padding-right: 0.32rem; }
+  .header .logo span {
+    display: inline-block;
+    font-size: 0.37333rem;
+    margin-left: 0.26667rem; }
+    .header .logo span .iconfont {
+      margin-left: 0.32rem; }
+  .header .icon-iconfont {
+    font-size: 0.66667rem; }
+  .header .icon-search {
+    font-size: 0.53333rem; }
+  .header .icon-weipinhuieps {
+    font-size: 0.53333rem;
+    color: #de3d96; }
+
+#slide1 {
+  width: 100%;
+  height: 1.09333rem;
+  background-color: #39424a; }
+  #slide1 .swiper-wrapper {
+    margin-top: 0.18667rem;
+    min-width: 10rem;
+    max-width: 20rem; }
+  #slide1 .page1 {
+    height: 0.66667rem;
+    width: auto;
+    text-align: center;
+    border-right: 1px solid #4a5259;
+    padding-right: 0.45333rem;
+    padding-left: 0.45333rem; }
+    #slide1 .page1 a {
+      display: inline-block;
+      color: #cfd3da;
+      font-size: 0.4rem;
+      line-height: 0.66667rem; }
+  #slide1 .corrent a {
+    border-bottom: 2px solid #f02387; }
+
+.slider {
+  margin-top: 2.26667rem;
+  width: 100%; }
+  .slider .swiper-wrapper {
+    width: 100%; }
+  .slider #slide2 {
+    width: 100%; }
+    .slider #slide2 .swiper-slide {
+      width: 100%; }
+      .slider #slide2 .swiper-slide img {
+        width: 100%; }
+
+.container {
+  width: 100%; }
+
+.guide {
+  display: flex;
+  flex-wrap: wrap; }
+  .guide .guide_item {
+    width: 25%; }
+    .guide .guide_item img {
+      width: 100%; }
+
+.container2 .ads {
+  width: 100%; }
+.container2 .ads1 img {
+  width: 100%; }
+.container2 .ads2 {
+  display: flex;
+  flex-wrap: nowrap; }
+  .container2 .ads2 .ads2_left {
+    width: 50%; }
+    .container2 .ads2 .ads2_left img {
+      width: 100%; }
+  .container2 .ads2 .ads2_right {
+    width: 50%; }
+    .container2 .ads2 .ads2_right img {
+      width: 100%; }
+.container2 .ads3 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+  .container2 .ads3 div {
+    width: 33.3%; }
+    .container2 .ads3 div img {
+      width: 100%; }
+
+/* 页面头部内容 end*/
+
+/*# sourceMappingURL=index.css.map */
