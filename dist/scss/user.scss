@@ -1,0 +1,267 @@
+@charset "UTF-8";
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font: 14px/1.5 Microsoft Yahei, Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+    background-color: #fff;
+}
+
+$color:#e4007f;
+// 将px转换为rem单位，在任何手机端同样适用
+@function rem($arg) {
+    // 你的页面是多少除以多少
+    @return $arg/75px * 1rem;
+}
+
+// 购物车
+header {
+    width: 100%;
+}
+
+.cart_header {
+    div {
+        position: relative;
+    }
+}
+
+.account {
+    height: rem(88px);
+    line-height: rem(88px);
+    background-color: #fbfbfa;
+    border-top: 1px solid #b0b0af;
+    // border-bottom: 1px solid #dbdbdb;
+    h4 {
+        font-size: rem(32px);
+        text-align: center;
+        span {
+            font-size: rem(30px);
+            color: $color;
+        }
+    }
+    .iconfont {
+        position: absolute;
+        left: rem(40px);
+        color: #555;
+        font-size: rem(40px);
+    }
+}
+
+.safety {
+    height: rem(74px);
+    line-height: rem(74px);
+    background-color: #e8eaf4;
+    p {
+        font-size: rem(28px);
+        color: #222;
+        padding-left: rem(86px);
+    }
+    .iconfont {
+        position: absolute;
+        left: rem(30px);
+        color: #4cc144;
+        font-size: rem(48px);
+    }
+}
+
+.address {
+    background-color: #656c89;
+    border-bottom: rem(30px) solid #f3f4f5;
+    a {
+        display: block;
+        font-size: rem(36px);
+        height: rem(92px);
+        line-height: rem(92px);
+        color: #fff;
+        padding-left: rem(40px);
+    }
+    .iconfont {
+        position: absolute;
+        right: rem(30px);
+        font-size: rem(30px);
+    }
+}
+
+.cart_container {
+    margin-bottom: rem(160px);
+}
+
+.cart_padding {
+    padding-left: rem(30px);
+    padding-right: rem(30px);
+    h4 {
+        font-size: rem(28px);
+        color: #222;
+        line-height: rem(96px);
+        border-bottom: 1px solid #ccc;
+    }
+    table {
+        font-size: rem(20px);
+        line-height: rem(40px);
+        th {
+            text-align: left;
+            color: #585c64;
+            height: rem(66px);
+            vertical-align: middle;
+            i {
+                color: $color;
+                margin-right: rem(10px);
+            }
+        }
+        td {
+            text-align: left;
+            vertical-align: top;
+            padding-bottom: rem(40px);
+        }
+        del {
+            color: #b1b1b1;
+        }
+        .title_info {
+            .title {
+                font-size: rem(22px);
+                color: #222;
+            }
+            .descrip,
+            .size {
+                color: #b1b1b1;
+            }
+            .num {
+                display: flex;
+                flex-wrap: nowrap;
+                width: rem(200px);
+                height: rem(48px);
+                border: 1px solid #b1b1b1;
+                border-radius: rem(4px);
+                button {
+                    width: 33%;
+                    height: 100%;
+                    font-size: rem(38px);
+                    color: #83878f;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                }
+                input {
+                    width: 33%;
+                    height: 99%;
+                    text-align: center;
+                    font-size: rem(38px);
+                    background-color: transparent;
+                    border-top: none;
+                    border-bottom: none;
+                    border-left: 1px solid #b1b1b1;
+                    border-right: 1px solid #b1b1b1;
+                }
+            }
+        }
+        .price_info {
+            text-align: right;
+            position: relative;
+            p {
+                font-size: rem(22px);
+            }
+            div {
+                position: absolute;
+                font-size: rem(30px);
+                bottom: rem(40px);
+                right: 0;
+                color: #b1b1b1;
+            }
+        }
+        .totle_price {
+            text-align: right;
+            line-height: rem(72px);
+            padding: 0;
+            border-top: 1px dotted #ddd;
+        }
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.vip_chart {
+    font-size: rem(28px);
+    height: rem(100px);
+    line-height: rem(100px);
+    a {
+        display: block;
+        position: relative;
+        .iconfont {
+            position: absolute;
+            right: 0;
+            font-size: rem(30px);
+        }
+    }
+    .liquan {
+        color: #000;
+        .iconfont {
+            color: #98989f;
+        }
+    }
+    .kouling {
+        color: #696969;
+        .iconfont {
+            color: #555555;
+        }
+    }
+    .money {
+        position: relative;
+        color: #000;
+        span {
+            position: absolute;
+            color: $color;
+            right: 0;
+        }
+    }
+}
+
+.cart_no_padding {
+    width: 100%;
+    height: rem(40px);
+    background-color: #f3f4f5;
+}
+
+.cart_footer {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: rem(150px);
+    border-top: 1px solid #ccc;
+    div {
+        width: 50%;
+        flex: 1;
+        padding-top: rem(30px);
+        background-color: #fff;
+        z-index: 9;
+        a {
+            display: block;
+            font-size: rem(38px);
+            width: rem(324px);
+            height: rem(92px);
+            line-height: rem(92px);
+            text-align: center;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: rem(6px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hdfk {
+            color: #ccc;
+            border-color: #ccc;
+        }
+        .zxzf {
+            color: #fff;
+            border-color: $color;
+            background-color: $color;
+        }
+    }
+}

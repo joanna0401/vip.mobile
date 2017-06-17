@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <script src="dist/js/flexble.js"></script>
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/user.css">
+    <link rel="stylesheet" href="dist/css/iconfont.css">
+</head>
+
+<body>
+    <header>
+        <div class="cart_header">
+            <div class="account">
+                <i class="iconfont icon-zuojiantou"></i>
+                <h4>结算<span><i class="minite">2</i>:<i class="seconed">2</i></span></h4>
+            </div>
+            <div class="safety">
+                <i class="iconfont icon-anquan"></i>
+                <p>你正在安全购物环境中,请放心购买</p>
+            </div>
+            <div class="address">
+                <a href="#">设置收获地址<i class="iconfont icon-chevron-right-copy"></i></a>
+            </div>
+        </div>
+    </header>
+    <div class="cart_container">
+        <div class="cart_padding">
+            <h4>唯品会发货</h4>
+            <table width="100%">
+                <tr>
+                    <th colspan="3">
+                        <p><i>◆</i>再购2件可享受购物满3件免1件</p>
+                    </th>
+                </tr>
+                <tr v-for="(shop,index) in shoplist">
+                    <td width="21%">
+                        <img :src="shop.img" alt="">
+                    </td>
+                    <td class="title_info">
+                        <p class="title">{{shop.title}}</p>
+                        <p class="descrip">{{shop.descrip}}</p>
+                        <p class="size">{{shop.size}}</p>
+                        <div class="num">
+                            <button @click="jian(index)" class="jian">-</button>
+                            <input type="text" v-bind:value="shop.num" readonly>
+                            <button @click="jia(index)" class="jia">+</button>
+                        </div>
+                    </td>
+                    <td class="price_info" width="20%">
+                        <p>￥<span>{{shop.price}}</span></p>
+                        <del>￥<i>{{shop.oldprice}}</i></del>
+                        <div @click="del(index)">×</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="totle_price">
+                        <p>￥<span>{{total.price}}</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        <p><i>◆</i>已享受新会员全场减38活动</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="cart_no_padding">
+        </div>
+        <div class="cart_padding vip_chart">
+            <a href="javascript:;" class="liquan">使用礼券<i class="iconfont icon-chevron-right-copy"></i></a>
+        </div>
+        <div class="cart_no_padding">
+        </div>
+        <div class="cart_padding vip_chart">
+            <a href="javascript:;" class="kouling">使用口令<i class="iconfont icon-chevron-right-copy"></i></a>
+        </div>
+        <div class="cart_no_padding">
+        </div>
+        <div class="cart_padding vip_chart">
+            <p class="money">订单金额
+                <span>￥<i>{{total.price}}</i></span>
+            </p>
+        </div>
+    </div>
+    <div class="cart_footer">
+        <div>
+            <a href="#" class="hdfk">货到付款</a>
+        </div>
+        <div>
+            <a href="#" class="zxzf">在线支付</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="dist/plugin/vue.min.js"></script>
+<script>
+Vue.filter('number', function(value) {
+    return value.toFixed(2);
+})
+new Vue({
+    el: ".cart_container",
+    data: {
+        shoplist: [{
+            id: 1,
+            title: "独特设计感-Masfer.SU女装专场 - 格纹V领无袖连衣裙",
+            descrip: "森马女装专场",
+            img: "dist/pic/shop1.jpg",
+            size: "M",
+            price: 199,
+            oldprice: 2599,
+            priceCut: 100,
+            num: 1
+        }, {
+            id: 2,
+            title: "珍珠饰套脚踝平底凉拖鞋米白色",
+            descrip: "森马女装专场",
+            img: "dist/pic/shop2.jpg",
+            size: "L",
+            price: 899,
+            oldprice: 1599,
+            priceCut: 200,
+            num: 1
+        }, {
+            id: 3,
+            title: "珍珠饰套脚踝平底凉拖鞋米白色",
+            descrip: "森马女装专场",
+            img: "dist/pic/shop3.jpg",
+            size: "L",
+            price: 899,
+            oldprice: 1599,
+            priceCut: 200,
+            num: 1
+        }, {
+            id: 4,
+            title: "珍珠饰套脚踝平底凉拖鞋米白色",
+            descrip: "森马女装专场",
+            img: "dist/pic/shop4.jpg",
+            size: "L",
+            price: 899,
+            oldprice: 1599,
+            priceCut: 200,
+            num: 1
+        }],
+    },
+    methods: {
+        jia: function(index) {
+            this.shoplist[index].num++;
+            if (this.shoplist[index].num >= 2) {
+                this.shoplist[index].num = 2;
+            }
+        },
+        jian: function(index) {
+            this.shoplist[index].num--;
+            if (this.shoplist[index].num <= 1) {
+                this.shoplist[index].num = 1;
+            }
+        },
+        del: function(index) {
+            // splice(删除第一个元素的索引，长度个数);
+            this.shoplist.splice(index, 1);
+        },
+    },
+    computed: {
+        total: function() {
+            // 总价格和总数默认为0
+            var total = {
+                price: 0,
+                sum: 0,
+            };
+
+            // 通过that将this关键字引入到下面的函数中，保证this的正常使用
+            var that = this; // 命名为that/_this/self
+
+            this.shoplist.forEach(function(value, key) {
+                total.price += value.price * value.num;
+                total.sum += value.num;
+
+            })
+
+            return total;
+        }
+    },
+
+})
+</script>

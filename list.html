@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分类列表</title>
+    <script src="dist/js/flexble.js"></script>
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_gsea2zgerrjp2e29.css"> -->
+    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" href="dist/css/iconfont.css">
+</head>
+
+<body>
+    <!-- 购物车 -->
+    <div class="cart" id="cart">
+        <a href="#"><i class="iconfont icon-gouwuche"></i></a>
+    </div>
+    <div class="chose_cities_bj"></div>
+    <div class="chose_cities">
+        <div class="model">
+            <div class="close">×</div>
+            <h3><i class="icon"></i>选择收货地址，火速配送哦</h3>
+        </div>
+        <div class="cities">
+            <dl>
+                <dt>我们猜您在</dt>
+                <dd>北京</dd>
+            </dl>
+            <dl>
+                <dt>华北地区</dt>
+                <dd>北京</dd>
+                <dd>天津</dd>
+                <dd>河北</dd>
+                <dd>山西</dd>
+                <dd>内蒙古</dd>
+            </dl>
+            <dl>
+                <dt>华南地区</dt>
+                <dd>北京</dd>
+                <dd>天津</dd>
+                <dd>河北</dd>
+                <dd>山西</dd>
+                <dd>内蒙古</dd>
+            </dl>
+            <dl>
+                <dt>华东地区</dt>
+                <dd>北京</dd>
+                <dd>天津</dd>
+                <dd>河北</dd>
+                <dd>山西</dd>
+                <dd>内蒙古</dd>
+            </dl>
+            <dl>
+                <dt>西南地区</dt>
+                <dd>北京</dd>
+                <dd>天津</dd>
+                <dd>河北</dd>
+                <dd>山西</dd>
+                <dd>内蒙古</dd>
+            </dl>
+            <dl>
+                <dt>东北地区</dt>
+                <dd>北京</dd>
+                <dd>天津</dd>
+                <dd>河北</dd>
+                <dd>山西</dd>
+                <dd>内蒙古</dd>
+            </dl>
+            <dl>
+                <dt>西北地区</dt>
+                <dd>北京</dd>
+                <dd>天津</dd>
+                <dd>河北</dd>
+                <dd>山西</dd>
+                <dd>内蒙古</dd>
+            </dl>
+        </div>
+        <div class="model">
+            <h3><i class="icon"></i>选择收货地址，火速配送哦</h3>
+        </div>
+    </div>
+    <header>
+        <div class="header">
+            <a href="#" class="user"><i class="iconfont icon-iconfont"></i></a>
+            <div class="logo">
+                <a class="logo_img" href=""><i class="iconfont icon-weipinhuieps"></i></a>
+                <span id="chose_city">北京<i class="iconfont icon-jiantou"></i></span>
+            </div>
+            <a href="#" class="search"><i class="iconfont icon-search"></i></a>
+        </div>
+        <!-- 头部导航条 -->
+        <div class="swiper-container" id="slide1">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide page1 ">
+                    <a href="# ">首页</a>
+                </div>
+                <div class="swiper-slide page1">
+                    <a href="# ">616年中大促</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">唯品国际</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">美妆</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">男装</a>
+                </div>
+                <div class="swiper-slide page1  corrent">
+                    <a href="# ">女装</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# ">母婴</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# "> 运动</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# "> 家居家电</a>
+                </div>
+                <div class="swiper-slide page1 ">
+                    <a href="# "> VIPLUX</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <a name="top" id="top"></a>
+    <!-- 今日特卖 -->
+    <div class="container shoplist list_margin">
+        <h2>今日特卖 · 每天早10点 晚8点上新</h2>
+        <div class="shop_item" v-for="shop in shoplist">
+            <a href="#">
+                <img :src="shop.img" alt="" width="100%">
+            </a>
+            <div class="shop_text">
+                <p>
+                    <span class="discut">{{shop.discut}}</span>
+                    <span class="title">{{shop.title}}</span>
+                </p>
+                <span class="remaining_time">剩<i>{{shop.remaining_time}}</i>天</span>
+            </div>
+        </div>
+        <div class="wait_more">
+            <p>早10晚8，更多特卖，敬请期待！</p>
+        </div>
+    </div>
+    <!-- 底部footer -->
+    <iframe src="footer.html" id="external-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+    <a href="#top" id="totop"><i class="iconfont icon-xiangshang"></i></a>
+</body>
+</body>
+
+</html>
+<script src="dist/js/jquery.min.js"></script>
+<script src="dist/plugin/swiper.min.js "></script>
+<script>
+var mySwiper1 = new Swiper('#slide1', {
+    preventClicks: false,
+    // slidesPerView: 4,
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    freeMode: true,
+});
+</script>
+<script src="dist/plugin/vue.min.js"></script>
+<script src="dist/js/index.js"></script>
+<script>
+new Vue({
+    el: ".shoplist",
+    data: {
+        shoplist: [{
+            id: 1,
+            title: "歌中歌Song of Song女装专场",
+            img: "dist/pic/01.jpg",
+            discut: '一折起',
+            remaining_time: 2,
+        }, {
+            id: 2,
+            title: "恩裳INSUN女装专场",
+            img: "dist/pic/02.jpg",
+            discut: '一口价',
+            remaining_time: 3,
+        }, {
+            id: 3,
+            title: "Five Plus女装商场同款专场",
+            img: "dist/pic/03.jpg",
+            discut: '1.5折起',
+            remaining_time: 1,
+        }, {
+            id: 4,
+            title: "Five Plus女装特惠专场",
+            img: "dist/pic/04.jpg",
+            discut: '2折起',
+            remaining_time: 2,
+        }, {
+            id: 5,
+            title: "Five Plus女装特惠专场",
+            img: "dist/pic/05.jpg",
+            discut: '',
+            remaining_time: 3,
+        }, {
+            id: 6,
+            title: "哈森HARSON集团品牌女鞋混合专场 ",
+            img: "dist/pic/06.jpg",
+            discut: '1.5折起',
+            remaining_time: 2,
+        }, {
+            id: 7,
+            title: "柯玛妮克komanic女鞋专场 ",
+            img: "dist/pic/07.jpg",
+            discut: '2折起',
+            remaining_time: 3,
+        }, {
+            id: 8,
+            title: "B.Duck香港潮牌服饰专场",
+            img: "dist/pic/08.jpg",
+            discut: '2.5折起',
+            remaining_time: 2,
+        }, {
+            id: 9,
+            title: "6.16焕变盛典-国际大牌",
+            img: "dist/pic/09.jpg",
+            discut: '4折起',
+            remaining_time: 1,
+        }, {
+            id: 10,
+            title: "6.16焕变盛典-国际大牌",
+            img: "dist/pic/10.jpg",
+            discut: '3.2折起',
+            remaining_time: 2,
+        }],
+    }
+})
+</script>

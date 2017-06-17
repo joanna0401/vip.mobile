@@ -1,0 +1,205 @@
+a {
+  text-decoration: none; }
+
+img {
+  display: block; }
+
+body {
+  font: 14px/1.5 Microsoft Yahei, Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+  background-color: #fff; }
+
+header {
+  width: 100%; }
+
+.cart_header div {
+  position: relative; }
+
+.account {
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+  background-color: #fbfbfa;
+  border-top: 1px solid #b0b0af; }
+  .account h4 {
+    font-size: 0.42667rem;
+    text-align: center; }
+    .account h4 span {
+      font-size: 0.4rem;
+      color: #e4007f; }
+  .account .iconfont {
+    position: absolute;
+    left: 0.53333rem;
+    color: #555;
+    font-size: 0.53333rem; }
+
+.safety {
+  height: 0.98667rem;
+  line-height: 0.98667rem;
+  background-color: #e8eaf4; }
+  .safety p {
+    font-size: 0.37333rem;
+    color: #222;
+    padding-left: 1.14667rem; }
+  .safety .iconfont {
+    position: absolute;
+    left: 0.4rem;
+    color: #4cc144;
+    font-size: 0.64rem; }
+
+.address {
+  background-color: #656c89;
+  border-bottom: 0.4rem solid #f3f4f5; }
+  .address a {
+    display: block;
+    font-size: 0.48rem;
+    height: 1.22667rem;
+    line-height: 1.22667rem;
+    color: #fff;
+    padding-left: 0.53333rem; }
+  .address .iconfont {
+    position: absolute;
+    right: 0.4rem;
+    font-size: 0.4rem; }
+
+.cart_container {
+  margin-bottom: 2.13333rem; }
+
+.cart_padding {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem; }
+  .cart_padding h4 {
+    font-size: 0.37333rem;
+    color: #222;
+    line-height: 1.28rem;
+    border-bottom: 1px solid #ccc; }
+  .cart_padding table {
+    font-size: 0.26667rem;
+    line-height: 0.53333rem; }
+    .cart_padding table th {
+      text-align: left;
+      color: #585c64;
+      height: 0.88rem;
+      vertical-align: middle; }
+      .cart_padding table th i {
+        color: #e4007f;
+        margin-right: 0.13333rem; }
+    .cart_padding table td {
+      text-align: left;
+      vertical-align: top;
+      padding-bottom: 0.53333rem; }
+    .cart_padding table del {
+      color: #b1b1b1; }
+    .cart_padding table .title_info .title {
+      font-size: 0.29333rem;
+      color: #222; }
+    .cart_padding table .title_info .descrip,
+    .cart_padding table .title_info .size {
+      color: #b1b1b1; }
+    .cart_padding table .title_info .num {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 2.66667rem;
+      height: 0.64rem;
+      border: 1px solid #b1b1b1;
+      border-radius: 0.05333rem; }
+      .cart_padding table .title_info .num button {
+        width: 33%;
+        height: 100%;
+        font-size: 0.50667rem;
+        color: #83878f;
+        border: none;
+        outline: none;
+        background-color: transparent; }
+      .cart_padding table .title_info .num input {
+        width: 33%;
+        height: 99%;
+        text-align: center;
+        font-size: 0.50667rem;
+        background-color: transparent;
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid #b1b1b1;
+        border-right: 1px solid #b1b1b1; }
+    .cart_padding table .price_info {
+      text-align: right;
+      position: relative; }
+      .cart_padding table .price_info p {
+        font-size: 0.29333rem; }
+      .cart_padding table .price_info div {
+        position: absolute;
+        font-size: 0.4rem;
+        bottom: 0.53333rem;
+        right: 0;
+        color: #b1b1b1; }
+    .cart_padding table .totle_price {
+      text-align: right;
+      line-height: 0.96rem;
+      padding: 0;
+      border-top: 1px dotted #ddd; }
+    .cart_padding table img {
+      width: 80%; }
+
+.vip_chart {
+  font-size: 0.37333rem;
+  height: 1.33333rem;
+  line-height: 1.33333rem; }
+  .vip_chart a {
+    display: block;
+    position: relative; }
+    .vip_chart a .iconfont {
+      position: absolute;
+      right: 0;
+      font-size: 0.4rem; }
+  .vip_chart .liquan {
+    color: #000; }
+    .vip_chart .liquan .iconfont {
+      color: #98989f; }
+  .vip_chart .kouling {
+    color: #696969; }
+    .vip_chart .kouling .iconfont {
+      color: #555555; }
+  .vip_chart .money {
+    position: relative;
+    color: #000; }
+    .vip_chart .money span {
+      position: absolute;
+      color: #e4007f;
+      right: 0; }
+
+.cart_no_padding {
+  width: 100%;
+  height: 0.53333rem;
+  background-color: #f3f4f5; }
+
+.cart_footer {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  border-top: 1px solid #ccc; }
+  .cart_footer div {
+    width: 50%;
+    flex: 1;
+    padding-top: 0.4rem;
+    background-color: #fff;
+    z-index: 9; }
+    .cart_footer div a {
+      display: block;
+      font-size: 0.50667rem;
+      width: 4.32rem;
+      height: 1.22667rem;
+      line-height: 1.22667rem;
+      text-align: center;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 0.08rem;
+      margin-left: auto;
+      margin-right: auto; }
+    .cart_footer div .hdfk {
+      color: #ccc;
+      border-color: #ccc; }
+    .cart_footer div .zxzf {
+      color: #fff;
+      border-color: #e4007f;
+      background-color: #e4007f; }

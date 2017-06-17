@@ -3,6 +3,15 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
+body {
+    font: 14px/1.5 Microsoft Yahei, Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+    background-color: #fff;
+}
+
 // 将px转换为rem单位，在任何手机端同样适用
 @function rem($arg) {
     // 你的页面是多少除以多少
@@ -28,8 +37,7 @@ header {
     height: rem(90px);
     line-height: rem(90px);
     font-size: rem(30px);
-    background-color: red;
-    // background-color: #fbfbfa;
+    background-color: #fbfbfa;
     border-top: 1px solid #b0b0af;
     a {
         display: inline-block;
@@ -113,6 +121,12 @@ header {
     width: 100%;
 }
 
+// 列表页面空出头部位置
+.list_margin {
+    margin-top: rem(170px);
+}
+
+// 列表页面空出头部位置
 .guide {
     display: flex;
     flex-wrap: wrap;
@@ -162,5 +176,808 @@ header {
     }
 }
 
+.container3 {
+    .ads2 {
+        display: flex;
+        flex-wrap: nowrap;
+        .ads2_left {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+        .ads2_right {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
 
-/* 页面头部内容 end*/
+.container4 {
+    .ads1 {
+        display: flex;
+        flex-wrap: wrap;
+        div {
+            width: 25%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.container5 {
+    .ads1 {
+        display: flex;
+        div {
+            flex: 1;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.shoplist {
+    h2 {
+        font-size: rem(34px);
+        text-align: center;
+        line-height: rem(86px);
+    }
+    .shop_item {
+        margin-bottom: rem(16px);
+    }
+    .shop_text {
+        height: rem(80px);
+        font-size: rem(30px);
+        border-bottom: 1px solid #d8d8d8;
+        position: relative;
+    }
+    p {
+        display: block;
+        height: 100%;
+        line-height: rem(80px);
+        width: rem(560px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #000;
+    }
+    .discut {
+        color: $color;
+        margin-left: rem(28px);
+        margin-right: rem(28px);
+    }
+    .remaining_time {
+        position: absolute;
+        bottom: rem(24px);
+        right: rem(28px);
+        color: #a0a0a0;
+        font-size: rem(24px);
+    }
+    .wait_more {
+        width: 100%;
+        height: rem(100px);
+        line-height: rem(100px);
+        p {
+            color: #bfbfbf;
+            font-size: rem(20px);
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.footer_icon {
+    width: 100%;
+    display: flex;
+    margin-bottom: rem(64px);
+    div {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid #ddd;
+        .iconfont {
+            font-size: rem(66px);
+            color: $color;
+        }
+        p {
+            color: #7b7b7b;
+            font-size: rem(20px);
+            line-height: rem(42px);
+        }
+    }
+    div:last-child {
+        border-right: none;
+    }
+}
+
+footer {
+    background-color: #f3f4f5;
+    width: 100%;
+    @mixin footerstyle() {
+        overflow: hidden;
+        width: 100%;
+        padding-top: rem(20px);
+        padding-bottom: rem(20px);
+    }
+    .footer1 {
+        @include footerstyle;
+        border-bottom: 1px solid #dedfdf;
+    }
+    .wph_logo {
+        float: left;
+        margin-left: rem(28px);
+        margin-right: rem(20px);
+        width: rem(74px);
+        height: rem(74px);
+        line-height: rem(74px);
+        text-align: center;
+        background-color: $color;
+        border-radius: rem(16px);
+        .icon-weipinhuieps {
+            color: #fff;
+            font-size: rem(20px);
+        }
+    }
+    .text {
+        float: left;
+        p {
+            color: #222222;
+            font-size: rem(24px);
+            line-height: rem(74px);
+        }
+    }
+    .download {
+        float: right;
+        color: $color;
+        font-size: rem(24px);
+        width: rem(120px);
+        height: rem(50px);
+        text-align: center;
+        line-height: rem(50px);
+        border: 1px solid $color;
+        border-radius: rem(8px);
+        margin-right: rem(28px);
+        margin-top: rem(14px);
+    }
+    .footer2 {
+        @include footerstyle;
+        a {
+            display: block;
+            color: #585c64;
+            font-size: rem(26px);
+        }
+    }
+    .to_index,
+    .about_us {
+        float: left;
+        padding-left: rem(28px);
+    }
+    .users {
+        float: right;
+        padding-right: rem(28px);
+    }
+    .footer3 {
+        color: #d5d5d5;
+        padding-left: rem(34px);
+        padding-right: rem(34px);
+        padding-bottom: rem(30px);
+        p {
+            font-size: rem(20px);
+            text-align: center;
+            line-height: rem(30px);
+            margin-top: rem(24px);
+        }
+        .icon {
+            display: inline-block;
+            width: rem(36px);
+            height: rem(36px);
+            background: url('../images/07345bf9.icon-psb.png') no-repeat;
+            background-size: 100% 100%;
+            vertical-align: middle;
+            margin-right: rem(20px);
+        }
+    }
+}
+
+// 购物车
+#cart,
+#totop {
+    z-index: 999;
+    position: fixed;
+    bottom: rem(40px);
+    width: rem(80px);
+    height: rem(80px);
+    line-height: rem(80px);
+    text-align: center;
+    border-radius: 50%;
+    .iconfont {
+        color: #fff;
+        font-size: rem(40px);
+    }
+}
+
+#cart {
+    left: rem(40px);
+    background-color: rgba(25, 29, 38, .95);
+}
+
+#totop {
+    display: none;
+    right: rem(40px);
+    background-color: rgba(34, 34, 34, .9);
+}
+
+// 选择城市
+.chose_cities_bj {
+    display: none;
+    z-index: 9990;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.chose_cities {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    left: rem(30px);
+    right: rem(30px);
+    top: rem(30px);
+    bottom: rem(30px);
+    background-color: rgba(0, 0, 0, .2);
+    padding: rem(8px);
+    overflow-y: scroll;
+}
+
+.cities {
+    background-color: #fff;
+    font-size: rem(30px);
+    dt,
+    dd {
+        padding-left: rem(36px);
+    }
+    dt {
+        color: #929292;
+        height: rem(50px);
+        line-height: rem(50px);
+        background-color: #ccc;
+    }
+    dd {
+        color: #030303;
+        height: rem(84px);
+        line-height: rem(84px);
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.model {
+    background-color: #fff;
+    color: $color;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    h3 {
+        padding: rem(30px);
+    }
+    .icon {
+        display: inline-block;
+        width: rem(48px);
+        height: rem(48px);
+        background: url('../images/2fef5020.rocket.png') no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-right: rem(30px);
+    }
+    .close {
+        position: absolute;
+        right: rem(40px);
+        top: rem(20px);
+        color: #949595;
+        font-size: rem(30px);
+        font-weight: bold;
+    }
+}
+
+// 分类页面开始
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    // width: rem(200px);
+    width: 26%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #f4f4f4;
+    li {
+        height: rem(110px);
+        line-height: rem(110px);
+        width: 100%;
+        text-align: center;
+        a {
+            font-size: rem(30px);
+            color: #585c64;
+        }
+    }
+    .current {
+        background-color: #fff;
+        border-left: rem(10px) solid $color;
+    }
+    .tofirst {
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.classify_content_box {
+    position: fixed;
+    top: 0;
+    right: rem(12px);
+    height: 100%;
+    overflow-y: scroll;
+    // width: rem(530px);
+    width: 70%;
+    padding-top: rem(30px);
+    padding-bottom: rem(30px);
+    h3 {
+        font-size: rem(26px);
+        height: rem(78px);
+        line-height: rem(78px);
+        font-weight: bold;
+    }
+}
+
+.classify_content_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-bottom: rem(60px);
+    padding-top: rem(30px);
+    margin-bottom: rem(30px);
+    border-bottom: 1px solid #e7e7e7;
+    figure {
+        width: 33%;
+        // flex: 1;
+        text-align: center;
+        figcaption {
+            font-size: rem(24px);
+            line-height: rem(50px);
+        }
+    }
+    img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+// 列表搜索页面
+.search_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
+    background-color: #fbfbfa;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: rem(34px);
+    .iconfont {
+        font-size: rem(34px);
+    }
+    .search_title {
+        display: flex;
+        width: rem(324px);
+        height: rem(56px);
+        border: 1px solid #585c64;
+        border-radius: rem(8px);
+        overflow: hidden;
+        a {
+            display: block;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            color: #585c64;
+        }
+        .current {
+            color: #fff;
+            background-color: #585c64;
+        }
+    }
+    .return {
+        position: relative;
+        .iconfont {
+            position: absolute;
+            left: rem(30px);
+            transform: rotate(180deg);
+        }
+    }
+    .home_logo {
+        margin-right: rem(30px);
+        font-weight: bold;
+    }
+}
+
+.search_list_top {
+    display: block;
+    position: fixed;
+    top: rem(90px);
+    left: 0;
+    background-color: #fff;
+    // margin-top: rem(90px);
+}
+
+.search_box {
+    padding-top: rem(24px);
+    padding-bottom: rem(24px);
+    background-color: #f3f4f5;
+    button {
+        display: block;
+        font-size: rem(34px);
+        color: #9d9da3;
+        border: 1px solid #d8d8d8;
+        border-radius: rem(10px);
+        background-color: #fff;
+        outline: none;
+        width: rem(688px);
+        height: rem(74px);
+        margin-left: rem(30px);
+        // margin-right: auto;
+    }
+    .iconfont {
+        font-size: rem(30px);
+        margin-right: rem(10px);
+    }
+}
+
+// 分类搜索头部导航
+#slide3 {
+    width: 100%;
+    height: rem(148px);
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    .swiper-wrapper {
+        margin-top: rem(14px);
+        min-width: rem(750px);
+        max-width: rem(1500px);
+    }
+    .page1 {
+        height: rem(148px);
+        width: auto;
+        text-align: center;
+        padding-right: rem(34px);
+        padding-left: rem(34px);
+        margin-top: rem(10px);
+        a {
+            display: block;
+            color: #82858b;
+            font-size: rem(28px);
+            line-height: rem(50px);
+        }
+        .iconfont {
+            font-size: rem(36px);
+        }
+    }
+    .corrent a {
+        color: $color;
+    }
+}
+
+// 分类搜索内容展示
+.contentBox {
+    margin-top: rem(400px);
+}
+
+.content {
+    width: 100%;
+    h3 {
+        font-size: rem(30px);
+        color: #222;
+        margin-top: rem(30px);
+        padding-left: rem(26px);
+        // line-height: rem(106px);
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        // justify-content: space-between;
+        padding: rem(26px);
+        li {
+            width: 32%;
+            margin-bottom: rem(4px);
+            margin-right: rem(4px);
+        }
+    }
+}
+
+// 搜索页面
+.search_input_outer {
+    width: 100%;
+    height: rem(90px);
+    line-height: rem(90px);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    div {
+        display: inline-block;
+    }
+    .return {
+        position: relative;
+        margin-left: rem(32px);
+        .iconfont {
+            font-size: rem(38px);
+            color: #555;
+        }
+    }
+    .search_input {
+        margin-left: rem(30px);
+        margin-right: rem(30px);
+        input {
+            width: rem(480px);
+            height: rem(30px);
+            color: #98989f;
+            font-size: rem(26px);
+            padding: rem(10px);
+            border: 1px solid #ccc;
+            outline: none;
+            border-radius: rem(6px);
+        }
+    }
+    a {
+        color: #555;
+        font-size: rem(30px);
+    }
+}
+
+.search_hot {
+    padding: rem(32px);
+    h3 {
+        font-size: rem(30px);
+    }
+    a {
+        display: inline-block;
+        color: #617bad;
+        line-height: rem(54px);
+        padding-left: rem(30px);
+        padding-right: rem(30px);
+        margin-right: rem(30px);
+        margin-top: rem(30px);
+        border: 1px solid #c4cddc;
+        border-radius: rem(6px);
+    }
+}
+
+// 详情页开始
+.show_header {
+    position: relative;
+    width: 100%;
+    .show_slide {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        img {
+            width: 100%;
+        }
+    }
+    .return {
+        position: absolute;
+        top: 0;
+        left: rem(24px);
+        .iconfont {
+            font-size: rem(86px);
+            color: #808080;
+        }
+    }
+    .time {
+        z-index: 9;
+        position: absolute;
+        top: rem(28px);
+        right: 0;
+        height: rem(50px);
+        line-height: rem(50px);
+        border-top-left-radius: rem(25px);
+        border-bottom-left-radius: rem(25px);
+        color: #fff;
+        background-color: rgba(0, 0, 0, .5);
+        p {
+            font-size: rem(26px);
+            padding-left: rem(20px);
+            padding-right: rem(20px);
+        }
+        span {
+            padding-left: rem(4px);
+            padding-right: rem(4px);
+        }
+    }
+}
+
+.shop_content_padding {
+    padding: rem(30px);
+    h3 {
+        font-size: rem(40px);
+        line-height: rem(118px);
+    }
+}
+
+.show_title {
+    border-bottom: 1px dashed #eaeaea;
+    p {
+        line-height: rem(80px);
+        color: #404040;
+        font-size: rem(28px);
+        max-width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.show_price {
+    display: flex;
+    justify-content: space-between;
+    .price_now {
+        font-size: rem(48px);
+        font-weight: bold;
+    }
+    del {
+        color: #98989f;
+        font-size: rem(28px);
+        margin-right: rem(24px);
+        margin-left: rem(24px);
+    }
+    .cutdowm {
+        display: inline-block;
+        color: #fff;
+        font-size: rem(24px);
+        padding-left: rem(5px);
+        padding-right: rem(5px);
+        background-color: #39424a;
+        border-radius: rem(4px);
+    }
+    .iconfont {
+        font-size: rem(44px);
+        margin-left: rem(18px);
+    }
+}
+
+.show_wpb {
+    padding-bottom: rem(30px);
+    border-bottom: 1px solid #ddd;
+    p {
+        font-size: rem(28px);
+        color: #222;
+        padding-top: rem(30px);
+    }
+    span {
+        display: inline-block;
+        font-size: rem(20px);
+        width: rem(118px);
+        text-align: center;
+        line-height: rem(32px);
+        color: #5682c1;
+        margin-right: rem(12px);
+        border: 1px solid #5682c1;
+        border-radius: rem(4px);
+    }
+}
+
+.shop_info {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    li {
+        position: relative;
+        width: 32%;
+        height: rem(66px);
+        text-align: center;
+        line-height: rem(66px);
+        margin-left: 1%;
+        margin-bottom: rem(24px);
+        border: 1px solid #ccc;
+        border-radius: rem(4px);
+    }
+    li:nth-of-type(3n+1) {
+        margin-left: 0;
+    }
+    .disabled {
+        color: #999;
+        background-color: #fafafa;
+        cursor: default;
+    }
+    .selected {
+        color: $color;
+        border: 1px solid $color;
+        .selected_bj {
+            display: block;
+        }
+    }
+    .selected_bj {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: rem(36px);
+        height: rem(36px);
+    }
+    .iconfont {
+        position: absolute;
+        bottom: rem(-18px);
+        right: rem(-2px);
+        font-size: rem(36px);
+    }
+    td {
+        font-size: rem(28px);
+        color: #5f636b;
+        line-height: rem(64px);
+    }
+}
+
+.shop_content {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    .vip_icon {
+        height: rem(94px);
+        line-height: rem(94px);
+        border-bottom: 1px solid #ccc;
+        p {
+            display: inline-block;
+            padding-left: rem(26px);
+            font-size: rem(28px);
+            color: #60646b;
+            .iconfont {
+                color: $color;
+                font-weight: bold;
+                font-size: rem(32px);
+                margin-right: rem(10px);
+            }
+        }
+    }
+    .vip_command {
+        padding-top: rem(38px);
+        padding-bottom: rem(38px);
+        img {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    .a_box {
+        height: rem(80px);
+        line-height: rem(80px);
+        padding-top: rem(18px);
+        padding-bottom: rem(18px);
+        a {
+            display: inline-block;
+            font-size: rem(32px);
+            color: #222;
+            width: 49%;
+            text-align: center;
+        }
+        a:first-child {
+            border-right: 1px solid #ccc;
+        }
+    }
+}
+
+.shop_content_img {
+    margin-bottom: rem(80px);
+    h3 {
+        font-size: rem(40px);
+        line-height: rem(118px);
+        padding-left: rem(32px);
+    }
+    img {
+        width: 100%;
+    }
+}
+
+// 详情页结束
