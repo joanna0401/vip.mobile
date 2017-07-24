@@ -25,7 +25,7 @@
     </header>
     <div class="search_list_top">
         <div class="search_box">
-            <button><i class="iconfont icon-search"></i>搜索品牌货商品</button>
+            <button><i class="iconfont icon-search"></i>搜索品牌或商品</button>
         </div>
         <!-- 头部导航条 -->
         <div class="swiper-container" id="slide3">
@@ -106,6 +106,7 @@
             <div class="swiper-scrollbar"></div>
         </div>
     </div>
+    <!-- </div> -->
     <div class="contentBox">
         <div class="content content1">
             <h3>女装</h3>
@@ -118,7 +119,7 @@
         <div class="content content2">
             <h3>男装</h3>
             <ul>
-                <li v-for="shop in nvzhuanglist">
+                <li v-for="shop in nanzhuanglist">
                     <a href="#"><img :src="shop.img" width="100%" alt=""></a>
                 </li>
             </ul>
@@ -126,7 +127,7 @@
         <div class="content content3">
             <h3>内衣</h3>
             <ul>
-                <li v-for="shop in nvzhuanglist">
+                <li v-for="shop in neiyilist">
                     <a href="#"><img :src="shop.img" width="100%" alt=""></a>
                 </li>
             </ul>
@@ -180,6 +181,9 @@
             </ul>
         </div>
     </div>
+    <div class="list_totop">
+        <a href="#" id="list_totop" name="list_totop"></a>
+    </div>
 </body>
 
 </html>
@@ -187,7 +191,7 @@
 <script src="dist/js/index.js"></script>
 <script src="dist/plugin/swiper.min.js "></script>
 <script>
-var mySwiper1 = new Swiper('#slide3', {
+var mySwiper3 = new Swiper('#slide3', {
     preventClicks: false,
     slidesPerView: 'auto',
     spaceBetween: 0,
@@ -202,22 +206,96 @@ new Vue({
     data: {
         nvzhuanglist: [{
             id: 1,
-            img: "dist/pic/s1.jpg",
+            img: "dist/pic/nv1.jpg",
         }, {
             id: 2,
-            img: "dist/pic/s2.jpg",
+            img: "dist/pic/nv2.jpg",
         }, {
             id: 3,
-            img: "dist/pic/s3.jpg",
+            img: "dist/pic/nv3.jpg",
         }, {
             id: 4,
-            img: "dist/pic/s4.jpg",
+            img: "dist/pic/nv4.jpg",
         }, {
             id: 5,
-            img: "dist/pic/s5.jpg",
+            img: "dist/pic/nv5.jpg",
         }, {
             id: 6,
-            img: "dist/pic/s6.jpg",
+            img: "dist/pic/nv6.jpg",
+        }, {
+            id: 7,
+            img: "dist/pic/nv7.jpg",
+        }, {
+            id: 8,
+            img: "dist/pic/nv8.jpg",
+        }, {
+            id: 9,
+            img: "dist/pic/nv9.jpg",
+        }, {
+            id: 10,
+            img: "dist/pic/nv10.jpg",
+        }, {
+            id: 11,
+            img: "dist/pic/nv11.jpg",
+        }, {
+            id: 12,
+            img: "dist/pic/nv12.jpg",
+        }],
+        nanzhuanglist: [{
+            id: 1,
+            img: "dist/pic/nan1.jpg",
+        }, {
+            id: 2,
+            img: "dist/pic/nan2.jpg",
+        }, {
+            id: 3,
+            img: "dist/pic/nan3.jpg",
+        }, {
+            id: 4,
+            img: "dist/pic/nan4.jpg",
+        }, {
+            id: 5,
+            img: "dist/pic/nan5.jpg",
+        }, {
+            id: 6,
+            img: "dist/pic/nan6.jpg",
+        }, {
+            id: 4,
+            img: "dist/pic/nan7.jpg",
+        }, {
+            id: 5,
+            img: "dist/pic/nan8.jpg",
+        }, {
+            id: 6,
+            img: "dist/pic/nan9.jpg",
+        }],
+        neiyilist: [{
+            id: 1,
+            img: "dist/pic/nei1.jpg",
+        }, {
+            id: 2,
+            img: "dist/pic/nei2.jpg",
+        }, {
+            id: 3,
+            img: "dist/pic/nei3.jpg",
+        }, {
+            id: 4,
+            img: "dist/pic/nei4.jpg",
+        }, {
+            id: 5,
+            img: "dist/pic/nei5.jpg",
+        }, {
+            id: 6,
+            img: "dist/pic/nei6.jpg",
+        }, {
+            id: 4,
+            img: "dist/pic/nei7.jpg",
+        }, {
+            id: 5,
+            img: "dist/pic/nei8.jpg",
+        }, {
+            id: 6,
+            img: "dist/pic/nei9.jpg",
         }],
     }
 })

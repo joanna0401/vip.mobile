@@ -27,7 +27,6 @@ header {
     top: 0;
     width: 100%;
     z-index: 999;
-    // width: rem(750px);
 }
 
 .header {
@@ -560,6 +559,20 @@ aside {
 }
 
 // 列表搜索页面
+.list_totop {
+    position: fixed;
+    right: rem(20px);
+    bottom: rem(-120px);
+    transition: bottom .2s ease 0s;
+    a {
+        display: block;
+        width: rem(70px);
+        height: rem(70px);
+        background: url('../images/go-top.a02bb338.png') no-repeat;
+        background-size: cover;
+    }
+}
+
 .search_header {
     width: 100%;
     display: flex;
@@ -606,12 +619,11 @@ aside {
 }
 
 .search_list_top {
-    display: block;
     position: fixed;
     top: rem(90px);
     left: 0;
     background-color: #fff;
-    // margin-top: rem(90px);
+    width: 100%;
 }
 
 .search_box {
@@ -639,6 +651,8 @@ aside {
 
 // 分类搜索头部导航
 #slide3 {
+    // position: fixed;
+    // top: rem(200px);
     width: 100%;
     height: rem(148px);
     background-color: #fff;
@@ -888,6 +902,20 @@ aside {
     li:nth-of-type(3n+1) {
         margin-left: 0;
     }
+    .color {
+        li {
+            text-align: left;
+        }
+        img {
+            display: inline-block;
+            width: rem(40px);
+            height: rem(40px);
+            margin-left: rem(20px);
+            margin-right: rem(20px);
+            margin-top: rem(-10px);
+            vertical-align: middle;
+        }
+    }
     .disabled {
         color: #999;
         background-color: #fafafa;
@@ -910,7 +938,7 @@ aside {
     }
     .iconfont {
         position: absolute;
-        bottom: rem(-18px);
+        bottom: rem(-20px);
         right: rem(-2px);
         font-size: rem(36px);
     }
@@ -981,3 +1009,102 @@ aside {
 }
 
 // 详情页结束
+// 分类列表页面,专场页面通用
+.classify_header {
+    display: flex;
+    justify-content: space-between;
+    height: rem(88px);
+    line-height: rem(88px);
+    background-color: #fbfbfa;
+    h3 {
+        width: 60%;
+        font-size: rem(40px);
+        overflow: hidden;
+        text-align: center;
+    }
+    .return {
+        width: 10%;
+        padding-left: rem(30px);
+    }
+    .home {
+        width: 10%;
+        padding-right: rem(30px);
+    }
+    .iconfont {
+        font-size: rem(40px);
+        color: #333;
+    }
+    .icon-zhuye {
+        font-weight: bold;
+    }
+}
+
+.sort_box {
+    display: flex;
+    height: rem(74px);
+    line-height: rem(74px);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: rem(30px);
+    div {
+        flex: 1;
+        font-size: rem(30px);
+        text-align: center;
+        border-right: 1px solid #ddd;
+    }
+    i {
+        font-size: rem(30px);
+    }
+    div:last-child {
+        border-right: none;
+    }
+}
+
+.classify_list_content {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        width: 48%;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: rem(46px);
+        img {
+            width: 100%;
+        }
+    }
+    p {
+        font-size: rem(24px);
+        color: #000;
+        height: rem(72px);
+        line-height: rem(36px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .price {
+        position: relative;
+        .new_price {
+            font-size: rem(24px);
+            color: $color;
+            font-weight: bold;
+        }
+        .pre_price {
+            font-size: rem(18px);
+            color: #888888;
+            text-decoration: line-through;
+        }
+        .discut {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            height: rem(28px);
+            line-height: rem(28px);
+            color: #fff;
+            padding-left: rem(10px);
+            padding-right: rem(10px);
+            background-color: #000;
+        }
+    }
+}

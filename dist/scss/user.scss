@@ -19,6 +19,28 @@ $color:#e4007f;
     @return $arg/75px * 1rem;
 }
 
+// 设置placehoder的字体颜色
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #cdcdd0;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #cdcdd0;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #cdcdd0;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #cdcdd0;
+}
+
+// 设置placehoder的字体颜色
 // 购物车
 header {
     width: 100%;
@@ -71,7 +93,8 @@ header {
 
 .address {
     background-color: #656c89;
-    border-bottom: rem(30px) solid #f3f4f5;
+    margin-bottom: rem(30px);
+    // border-bottom: rem(30px) solid #f3f4f5;
     a {
         display: block;
         font-size: rem(36px);
@@ -88,12 +111,14 @@ header {
 }
 
 .cart_container {
-    margin-bottom: rem(160px);
+    margin-bottom: rem(300px);
 }
 
 .cart_padding {
     padding-left: rem(30px);
     padding-right: rem(30px);
+    background-color: #fff;
+    margin-bottom: rem(40px);
     h4 {
         font-size: rem(28px);
         color: #222;
@@ -187,9 +212,9 @@ header {
 
 .vip_chart {
     font-size: rem(28px);
-    height: rem(100px);
-    line-height: rem(100px);
     a {
+        height: rem(100px);
+        line-height: rem(100px);
         display: block;
         position: relative;
         .iconfont {
@@ -204,64 +229,373 @@ header {
             color: #98989f;
         }
     }
-    .kouling {
+    .kouling,
+    .fapiao {
         color: #696969;
         .iconfont {
             color: #555555;
         }
     }
-    .money {
+    p {
+        height: rem(100px);
+        line-height: rem(100px);
         position: relative;
-        color: #000;
         span {
             position: absolute;
-            color: $color;
             right: 0;
         }
     }
-}
-
-.cart_no_padding {
-    width: 100%;
-    height: rem(40px);
-    background-color: #f3f4f5;
+    .money {
+        color: #000;
+        border-bottom: 1px solid #ddd;
+        span {
+            color: $color;
+        }
+    }
+    .shop_money {
+        height: rem(80px);
+        line-height: rem(80px);
+        color: #585c64;
+    }
 }
 
 .cart_footer {
     position: fixed;
-    display: flex;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: rem(150px);
+    background-color: #fff;
     border-top: 1px solid #ccc;
-    div {
-        width: 50%;
-        flex: 1;
-        padding-top: rem(30px);
-        background-color: #fff;
-        z-index: 9;
+    p {
+        width: 100%;
+        line-height: rem(50px);
+        text-align: center;
+    }
+    .need_money {
+        font-size: rem(30px);
+        color: #000;
+        margin-top: rem(30px);
+        span {
+            padding-left: rem(16px);
+            color: $color;
+        }
+    }
+    .warning {
+        font-size: rem(24px);
+        color: #a8a8ae;
+    }
+    .payment {
+        display: flex;
+        height: rem(120px);
+        width: 100%;
+        div {
+            width: 50%;
+            flex: 1;
+            padding-top: rem(20px);
+            z-index: 9;
+            a {
+                display: block;
+                font-size: rem(38px);
+                width: rem(324px);
+                height: rem(90px);
+                line-height: rem(90px);
+                text-align: center;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: rem(6px);
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hdfk {
+                color: #ccc;
+                border-color: #ccc;
+            }
+            .zxzf {
+                color: #fff;
+                border-color: $color;
+                background-color: $color;
+            }
+        }
+    }
+}
+
+// 购物车结束
+// 个人中心开始
+.user_login {
+    width: 100%;
+    background: url('../images/user-login-bg.png') no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: rem(30px);
+}
+
+.user_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(20px);
+    .return {
+        padding-left: rem(20px);
+    }
+    .home {
+        padding-right: rem(20px);
+    }
+    .iconfont {
+        font-size: rem(46px);
+        color: #333;
+        margin-top: rem(20px);
+    }
+}
+
+.user_bj {}
+
+.user_logo {
+    position: relative;
+    width: rem(160px);
+    height: rem(160px);
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../images/user-photo.png') no-repeat;
+    background-size: 100% 100%;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -45%;
+        margin-top: -45%;
+        width: 90%;
+        height: 90%;
+    }
+}
+
+.user_grade {
+    text-align: center;
+    color: #9d9da3;
+    height: rem(60px);
+    line-height: rem(60px);
+    img {
+        display: inline-block;
+        width: rem(40px);
+        height: rem(40px);
+        vertical-align: middle;
+    }
+    span {
+        display: inline-block;
+        font-size: rem(24px);
+        vertical-align: bottom;
+    }
+}
+
+.user_name {
+    line-height: rem(60px);
+    text-align: center;
+    font-size: rem(20px);
+}
+
+.user_list {
+    display: flex;
+    justify-content: space-around;
+    color: #585c64;
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
+    border-bottom: 1px solid #ddd;
+    .list_item {
+        text-align: center;
+        div {
+            width: rem(80px);
+            height: rem(80px);
+            line-height: rem(80px);
+            border-radius: 50%;
+            background-color: #fcf9f1;
+        }
+        p {
+            line-height: rem(40px);
+            font-size: rem(24px);
+        }
+    }
+    .iconfont {
+        font-size: rem(34px);
+    }
+    .icon-daishouhuo {
+        font-weight: bold;
+    }
+}
+
+.mylist {
+    margin-top: rem(42px);
+    margin-bottom: rem(42px);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    li {
+        position: relative;
+        border-bottom: 1px solid #ddd;
+        margin-left: rem(34px);
+    }
+    li:last-child {
+        border-bottom: none;
+    }
+    a {
+        display: block;
+        font-size: rem(34px);
+        color: #333;
+        padding-top: rem(34px);
+        padding-bottom: rem(34px);
+    }
+    i {
+        position: absolute;
+    }
+    .icon {
+        right: rem(100px);
+        top: rem(44px);
+        width: rem(82px);
+        height: rem(40px);
+        background: url('../images/new.png') no-repeat;
+        background-size: cover;
+    }
+    .iconfont {
+        top: rem(34px);
+        right: rem(34px);
+        font-weight: normal;
+        font-size: rem(34px);
+        color: #333;
+    }
+}
+
+.exit {
+    margin-bottom: rem(42px);
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    a {
+        display: block;
+        color: #333;
+        font-size: rem(34px);
+        text-align: center;
+        height: rem(80px);
+        line-height: rem(80px);
+    }
+}
+
+// 登录页面
+.loginTop {
+    width: 100%;
+    height: rem(340px);
+    background: url('../images/login_bg.png') no-repeat;
+    background-size: cover;
+    position: relative;
+    .loginLogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: rem(-50px);
+        margin-left: rem(-125px);
+        width: rem(250px);
+        height: rem(100px);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .close {
+        font-size: rem(40px);
+        font-weight: bold;
+        color: #222;
+        position: absolute;
+        top: rem(30px);
+        right: rem(30px);
+    }
+}
+
+.input_text {
+    font-size: rem(26px);
+    color: #000;
+    height: rem(78px);
+    line-height: rem(78px);
+    label {
+        margin-left: rem(30px);
+        margin-right: rem(20px);
+    }
+    input {
+        font-size: rem(26px);
+        border: none;
+        outline: none;
+    }
+}
+
+.yzm {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    button {
+        float: right;
+        border: none;
+        border-left: 1px solid #ddd;
+        font-size: rem(26px);
+        color: #4a90e2;
+        width: rem(230px);
+        height: rem(78px);
+        text-align: center;
+        background-color: transparent;
+        border-radius: rem(6px);
+    }
+}
+
+.login_reg {
+    .login_reg_now {
+        display: block;
+        width: 90%;
+        height: rem(88px);
+        line-height: rem(88px);
+        text-align: center;
+        font-size: rem(30px);
+        color: #ee9eca;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #de3d96;
+        margin-top: rem(54px);
+        margin-bottom: rem(24px);
+        border-radius: rem(6px);
+    }
+    p {
+        color: #98989f;
+        font-size: rem(24px);
+        width: 90%;
+        line-height: rem(32px);
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
         a {
-            display: block;
-            font-size: rem(38px);
-            width: rem(324px);
-            height: rem(92px);
-            line-height: rem(92px);
-            text-align: center;
-            border-width: 1px;
-            border-style: solid;
-            border-radius: rem(6px);
-            margin-left: auto;
-            margin-right: auto;
+            color: #4a90e2;
         }
-        .hdfk {
-            color: #ccc;
-            border-color: #ccc;
-        }
-        .zxzf {
-            color: #fff;
-            border-color: $color;
-            background-color: $color;
-        }
+    }
+}
+
+.other_login_m {
+    position: relative;
+    margin-top: rem(46px);
+    padding-top: rem(80px);
+    border-top: 1px solid #dbdbdb;
+    legend {
+        display: block;
+        width: rem(68px);
+        height: rem(68px);
+        position: absolute;
+        top: rem(-34px);
+        left: 50%;
+        margin-left: rem(-34px);
+        font-size: rem(24px);
+        text-align: center;
+        line-height: rem(68px);
+        background-color: #fff;
+    }
+    .pass_login {
+        display: block;
+        width: rem(180px);
+        height: rem(80px);
+        line-height: rem(80px);
+        text-align: center;
+        font-size: rem(30px);
+        color: $color;
+        border: rem(4px) solid $color;
+        border-radius: rem(6px);
+        margin-left: auto;
+        margin-right: auto;
     }
 }

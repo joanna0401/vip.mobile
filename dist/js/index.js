@@ -78,4 +78,24 @@ $(function() {
         // $('.seconed').html(s);
     }
     setInterval(GetRTime, 0);
+
+    // listsearch返回顶部
+    $(document).scroll(function() {
+        if ($(document).scrollTop() >= 1000) {
+            // $('#list_totop').animate({
+            //     'bottom': 20,
+            // }, 100);
+            $('.list_totop').css('bottom', '20px');
+        } else {
+            // $('#list_totop').animate({
+            //     'bottom': -120,
+            // }, 100);
+            $('.list_totop').css('bottom', '-120px');
+        }
+    });
+    $('#list_totop').click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 50);
+    });
 })

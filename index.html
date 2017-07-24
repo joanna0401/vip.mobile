@@ -15,7 +15,7 @@
 <body style="position:relative;">
     <!-- 购物车 -->
     <div class="cart" id="cart">
-        <a href="#"><i class="iconfont icon-gouwuche"></i></a>
+        <a href="cart.html"><i class="iconfont icon-gouwuche"></i></a>
     </div>
     <div class="chose_cities_bj"></div>
     <div class="chose_cities">
@@ -83,45 +83,45 @@
     </div>
     <header>
         <div class="header">
-            <a href="#" class="user"><i class="iconfont icon-iconfont"></i></a>
+            <a href="user.html" class="user"><i class="iconfont icon-iconfont"></i></a>
             <div class="logo">
-                <a class="logo_img" href=""><i class="iconfont icon-weipinhuieps"></i></a>
+                <a class="logo_img" href="index.html"><i class="iconfont icon-weipinhuieps"></i></a>
                 <span id="chose_city">北京<i class="iconfont icon-jiantou"></i></span>
             </div>
-            <a href="#" class="search"><i class="iconfont icon-search"></i></a>
+            <a href="listsearch.html" class="search"><i class="iconfont icon-search"></i></a>
         </div>
         <!-- 头部导航条 -->
         <div class="swiper-container" id="slide1">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide page1 corrent ">
-                    <a href="# ">首页</a>
+                    <a href="index.html">首页</a>
                 </div>
                 <div class="swiper-slide page1">
-                    <a href="# ">616年中大促</a>
+                    <a href="list.html">616年中大促</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# ">唯品国际</a>
+                    <a href="list.html">唯品国际</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# ">美妆</a>
+                    <a href="list.html">美妆</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# ">男装</a>
+                    <a href="list.html">男装</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# ">女装</a>
+                    <a href="list.html">女装</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# ">母婴</a>
+                    <a href="list.html">母婴</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# "> 运动</a>
+                    <a href="list.html"> 运动</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# "> 家居家电</a>
+                    <a href="list.html"> 家居家电</a>
                 </div>
                 <div class="swiper-slide page1 ">
-                    <a href="# "> VIPLUX</a>
+                    <a href="list.html"> VIPLUX</a>
                 </div>
             </div>
         </div>
@@ -150,28 +150,28 @@
         </div>
         <div class="guide">
             <div class="guide_item">
-                <a href="#"><img src="dist/images/ga1.jpg" alt=""></a>
+                <a href="classify_list.html"><img src="dist/images/ga1.jpg" alt=""></a>
             </div>
             <div class="guide_item">
-                <a href="#"><img src="dist/images/ga2.jpg" alt=""></a>
+                <a href="classify_list.html"><img src="dist/images/ga2.jpg" alt=""></a>
             </div>
             <div class="guide_item">
-                <a href="#"><img src="dist/images/ga3.jpg" alt=""></a>
+                <a href="classify_list.html"><img src="dist/images/ga3.jpg" alt=""></a>
             </div>
             <div class="guide_item">
-                <a href="#"><img src="dist/images/ga4.jpg" alt=""></a>
+                <a href="classify_list.html"><img src="dist/images/ga4.jpg" alt=""></a>
             </div>
             <div class="guide_item">
-                <a href="#"> <img src="dist/images/ga5.jpg" alt=""></a>
+                <a href="classify_list.html"> <img src="dist/images/ga5.jpg" alt=""></a>
             </div>
             <div class="guide_item">
-                <a href="#"><img src="dist/images/ga6.jpg" alt=""></a>
+                <a href="classify_list.html"><img src="dist/images/ga6.jpg" alt=""></a>
             </div>
             <div class="guide_item">
-                <a href="#"><img src="dist/images/ga7.jpg" alt=""></a>
+                <a href="classify_list.html"><img src="dist/images/ga7.jpg" alt=""></a>
             </div>
             <div class="guide_item">
-                <a href="#"> <img src="dist/images/ga8.jpg" alt=""></a>
+                <a href="classify.html"><img src="dist/images/ga8.jpg" alt=""></a>
             </div>
         </div>
     </div>
@@ -304,7 +304,7 @@
     <div class="container shoplist">
         <h2>今日特卖 · 每天早10点 晚8点上新</h2>
         <div class="shop_item" v-for="shop in shoplist">
-            <a href="#">
+            <a href="show.html">
                 <img :src="shop.img" alt="" width="100%">
             </a>
             <div class="shop_text">
@@ -335,42 +335,6 @@
         setIframeHeight(document.getElementById('external-frame'));
     };
     </script>
-    <!--  <div class="footer_icon">
-        <div>
-            <i class="iconfont icon-shizhong"></i>
-            <p>即将上线</p>
-        </div>
-        <div>
-            <i class="iconfont icon-tuangou1"></i>
-            <p>唯品团购</p>
-        </div>
-        <div>
-            <i class="iconfont icon-zhengpinbaozhang01"></i>
-            <p>正品保证</p>
-        </div>
-        <div>
-            <i class="iconfont icon-kefu"></i>
-            <p>唯品客服</p>
-        </div>
-    </div>
-    <footer>
-        <div class="footer1">
-            <div class="wph_logo"><i class="iconfont icon-weipinhuieps"></i></div>
-            <div class="text">
-                <p>唯品会客户端，特卖抢不停</p>
-            </div>
-            <div class="download">下载</div>
-        </div>
-        <div class="footer2">
-            <a href="#" class="to_index">唯品会首页</a>
-            <a href="#" class="about_us">关于我们</a>
-            <a href="#" class="users">个人中心</a>
-        </div>
-        <div class="footer3">
-            <p>Copyright © 2008-2017 m.vip.com, All Rights Reserved 粤ICP备08114786号</p>
-            <p><i class="icon"></i>粤公网安备 44010302000068号</p>
-        </div>
-    </footer> -->
     <a href="#top" id="totop"><i class="iconfont icon-xiangshang"></i></a>
 </body>
 
@@ -381,14 +345,9 @@
 <script>
 var mySwiper1 = new Swiper('#slide1', {
     preventClicks: false,
-    // slidesPerView: 4,
     slidesPerView: 'auto',
     spaceBetween: 0,
     freeMode: true,
-    // onTap: function() {
-    //     mySwiper2.slideTo(mySwiper1.clickedIndex);
-    // }
-
 });
 // 响应式图片  width:100%;height:auto
 var mySwiper2 = new Swiper('#slide2', {

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="dist/css/iconfont.css">
 </head>
 
-<body>
+<body style="background-color: #f3f4f5;">
     <header>
         <div class="cart_header">
             <div class="account">
@@ -67,30 +67,39 @@
                 </tr>
             </table>
         </div>
-        <div class="cart_no_padding">
-        </div>
         <div class="cart_padding vip_chart">
             <a href="javascript:;" class="liquan">使用礼券<i class="iconfont icon-chevron-right-copy"></i></a>
         </div>
-        <div class="cart_no_padding">
-        </div>
         <div class="cart_padding vip_chart">
             <a href="javascript:;" class="kouling">使用口令<i class="iconfont icon-chevron-right-copy"></i></a>
-        </div>
-        <div class="cart_no_padding">
         </div>
         <div class="cart_padding vip_chart">
             <p class="money">订单金额
                 <span>￥<i>{{total.price}}</i></span>
             </p>
+            <p class="shop_money">商品总金额
+                <span>￥<i>{{total.price}}</i></span>
+            </p>
+            <p class="shop_money">唯品会发货运费
+                <span>￥<i>0</i></span>
+            </p>
         </div>
-    </div>
-    <div class="cart_footer">
-        <div>
-            <a href="#" class="hdfk">货到付款</a>
+        <div class="cart_padding vip_chart">
+            <a href="javascript:;" class="fapiao">开具发票<i class="iconfont icon-chevron-right-copy"></i></a>
         </div>
-        <div>
-            <a href="#" class="zxzf">在线支付</a>
+        <div class="cart_footer">
+            <p class="need_money">
+                还需支付<span>￥<i>{{total.price}}</i></span>
+            </p>
+            <p class="warning">当前商品暂不支持货到付款</p>
+            <div class="payment">
+                <div>
+                    <a href="#" class="hdfk">货到付款</a>
+                </div>
+                <div>
+                    <a href="#" class="zxzf">在线支付</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

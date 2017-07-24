@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>列表页</title>
+    <script src="dist/js/flexble.js"></script>
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_gsea2zgerrjp2e29.css"> -->
+    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet" href="dist/css/iconfont.css">
+</head>
+
+<body>
+    <a name="top" id="top"></a>
+    <!-- 购物车 -->
+    <div class="cart" id="cart">
+        <a href="cart.html"><i class="iconfont icon-gouwuche"></i></a>
+    </div>
+    <div class="classify_header_outer">
+        <div class="classify_header">
+            <div class="return">
+                <i class="iconfont icon-zuojiantou"></i>
+            </div>
+            <h3>连衣裙</h3>
+            <div class="home">
+                <a href="index.html"><i class="iconfont icon-zhuye"></i></a>
+            </div>
+        </div>
+        <div class="sort_box">
+            <div>
+                <i class="iconfont icon-paixu"></i>价格
+            </div>
+            <div>
+                <i class="iconfont icon-paixu"></i>折扣
+            </div>
+            <div>
+                <i class="iconfont icon-pinpai"></i>品牌
+            </div>
+            <div>
+                <i class="iconfont icon-shaixuan"></i>筛选
+            </div>
+        </div>
+    </div>
+    <div class="classify_list_content">
+        <ul>
+            <li v-for="shop in shoplist">
+                <a href="show.html"><img :src="shop.img" alt=""></a>
+                <p> {{shop.title}}</p>
+                <div class="price">
+                    <span class="new_price">¥<i>{{shop.price}}</i></span>
+                    <span class="pre_price">¥<i>{{shop.oldprice}}</i></span>
+                    <span class="discut"><i>{{shop.price/shop.oldprice*10 | one}}</i>折</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <a href="#top" id="totop"><i class="iconfont icon-xiangshang"></i></a>
+    <!-- 底部footer -->
+    <iframe src="footer.html" id="external-frame" width="100%" height="600px" scrolling="no" frameborder="0"></iframe>
+</body>
+
+</html>
+<script src="dist/js/jquery.min.js"></script>
+<script src="dist/js/index.js"></script>
+<script src="dist/plugin/vue.min.js"></script>
+<script>
+Vue.filter('one', function(value) {
+    return value.toFixed(1);
+})
+new Vue({
+    el: ".classify_list_content",
+    data: {
+        shoplist: [{
+            id: 1,
+            title: "盛放 | 碎花吊带荷叶边连衣裙黄色碎花",
+            img: "dist/pic/1.jpg",
+            price: 107,
+            oldprice: 417,
+        }, {
+            id: 2,
+            title: "对白 | 【杜鹃同款】 女款连衣裙 气质无袖不对称拼接下摆藏青色",
+            img: "dist/pic/2.jpg",
+            price: 125,
+            oldprice: 369,
+        }, {
+            id: 3,
+            title: "苏醒的乐园 | 时尚吊带背心裙咖啡色",
+            img: "dist/pic/3.jpg",
+            price: 119,
+            oldprice: 399,
+        }, {
+            id: 4,
+            title: "粉红大布娃娃 | 大红色前短后长吊带长款连衣裙",
+            img: "dist/pic/4.jpg",
+            price: 187,
+            oldprice: 398,
+        }, {
+            id: 5,
+            title: "美莎帕 | 个性印花不规则名媛气质飘逸雪纺连衣裙",
+            img: "dist/pic/5.jpg",
+            price: 248,
+            oldprice: 988,
+        }, {
+            id: 6,
+            title: "La Babite | 露肩收腰A字修身短裙连衣裙条纹混色",
+            img: "dist/pic/6.jpg",
+            price: 99,
+            oldprice: 199,
+        }, {
+            id: 7,
+            title: "纳纹 | 雪纺印花五分袖荷叶袖荷叶摆连衣裙灰蓝",
+            img: "dist/pic/7.jpg",
+            price: 269,
+            oldprice: 659,
+        }, {
+            id: 8,
+            title: "S.DEER | 优雅镂空蓬松连衣裙",
+            img: "dist/pic/8.jpg",
+            price: 289,
+            oldprice: 669,
+        }, {
+            id: 9,
+            title: "La Babite | 露肩收腰A字修身短裙连衣裙条纹混色",
+            img: "dist/pic/9.jpg",
+            price: 99,
+            oldprice: 199,
+        }, {
+            id: 10,
+            title: "美莎帕 | 收腰牛仔拼接连衣裙深蓝色",
+            img: "dist/pic/11.jpg",
+            price: 256,
+            oldprice: 879,
+        }],
+    }
+})
+</script>
